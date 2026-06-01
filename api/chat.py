@@ -11,6 +11,7 @@ app = FastAPI()
 
 
 @app.post("/")
+@app.post("/api/chat")
 def chat(request: ChatRequest):
     try:
         return handle_chat(request)

@@ -3,10 +3,10 @@
   "version": 2,
   "builds": [
     { "src": "frontend/package.json", "use": "@vercel/next" },
-    { "src": "api/chat.py", "use": "@vercel/python" }
+    { "src": "api/index.py", "use": "@vercel/python" }
   ],
   "routes": [
-    { "src": "/api/chat", "dest": "/api/chat.py" },
+    { "src": "/api/chat", "dest": "/api/index.py" },
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "frontend/$1" }
   ]
