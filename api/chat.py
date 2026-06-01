@@ -2,7 +2,10 @@
 
 from fastapi import FastAPI, HTTPException
 
-from index import ChatRequest, handle_chat
+try:
+    from chat_logic import ChatRequest, handle_chat
+except ImportError:
+    from api.chat_logic import ChatRequest, handle_chat
 
 app = FastAPI()
 
